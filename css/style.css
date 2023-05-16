@@ -154,20 +154,22 @@ footer {
 		gap: 8px;
 	}
 
-/* TODO ハンバーガーメニュー調整中 */
-.slicknav_menu {
-position:absolute;
-top: 30px;
-right: 20px;
-}
-.slicknav_nav {
-position:relative;
-right:0px;
-width:max-content;
-}
-
-
-
+	/* ハンバーガーメニューのスタイルをカスタマイズ
+	DevTools で試行錯誤して上書きするものを確定し、ここに書いた
+	*/
+	.slicknav_menu {
+		position:absolute;
+		top: 25px;
+		right: 20px;
+		background: transparent !important;
+	}
+	.slicknav_nav {
+		position:relative;
+		right:0px;
+		width:max-content;
+		background: #4c4c4c;
+	}
+	/* ハンバーガーメニューのカスタマイズここまで */
 
 	.section-1st ul {
 		flex-direction: column;
