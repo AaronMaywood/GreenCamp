@@ -1,16 +1,54 @@
-# GreenCamp
-
-- TODO 命名規則
-	BEM
-	https://qiita.com/takahirocook/items/01fd723b934e3b38cbbc
-- TODO PDF指示を明確にする
-	- flex に導かれるように、要素間のgapを統一する
-	- font
-bodyに背景画像「back.gif」を配置。
-h3 ボーダーカラー：#1a401a
-footer　カラー：#1a401a
+# レスポンシブ対応ページ作例「GreenCamp」
 
 ## 要件
+
+- 「デザインカンプ.pdf」に従って実装して下さい。
+	デザインカンプ上に指示のない細かな点はデザインカンプの作例に沿うように自分で値を決めてください。
+
+- HTMLファイル名を index.html としてください。
+
+- index.html に使用するテキスト素材は下↓の「テキスト素材」の項に用意しています。
+
+- 必要な画像素材は images/ 下に格納してあります。
+
+- HTMLのhead部に以下の情報を指定してください。
+	- タイトル：Green Camp
+	- 記述された文書の主要な言語：日本語
+	- 文字コード：utf-8
+	- 検索サイトに検索されないように <meta name="robots"> の設定をしてください
+	- サイトの説明：Green Campでは、自然の中にある「森林探検隊」を運営しています。森林探検隊では、四季を通してイベントを開催したり、さまざまな商品の開発を行っています。
+	- ファビコン：images/favicon.ico
+
+- img 要素には適切な width, height, alt 属性を指定して下さい。
+	これら３属性は必須で、省略してはなりません。
+
+	ヒント：alt属性について
+		代替テキストが必要な場合には代替テキストを入れ、
+			OK   <img src="images/sample.jpg" width="300" height="200" alt="代替テキスト">
+		代替テキストが不要な場合（単にデザイン上の装飾画像にすぎない）にはalt属性の値を空にしてください。
+			OK   <img src="images/sample.jpg" width="300" height="200" alt="">
+			（ウェブデザインでは、多くの画像が alt="" として使用されます。この形式が最も多いです。）
+		決して alt 属性を省略(alt自体を書かない）してはなりません。
+			NG!  <img src="images/sample.jpg" width="300" height="200">
+
+- CSSファイル名を css/style.css としてください。
+
+- リセットCSSを css/reset.css として用意してあります。
+	こちらのリセットCSSを利用してください。
+	なお、これは Josh W. Comeau 氏によるリセットCSS("Josh's Custom CSS Reset") です。
+
+	概要を知りたい場合にはこちらの記事をご覧ください。
+	https://coliss.com/articles/build-websites/operation/css/my-custom-css-reset.html
+
+- 以下のフォントを全てのテキストで統一的に使用します。
+	「font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;」
+
+- ソースコードには適切なインデントを設けて下さい
+
+- ハンバーガーメニューを実現するには https://computerwolf.github.io/SlickNav/ で配付している SlickNav を使用します
+	SlickNav の使用方法は https://github.com/AaronMaywood/SlickNav-Tuto で解説しています。
+	こちらの解説で学んでください。
+
 - 以下のブラウザーでの動作確認を行って下さい。（所有している環境の範囲でかまいません）
 	- デスクトップPC
 		- Windows
@@ -22,38 +60,15 @@ footer　カラー：#1a401a
 			- Chrome
 			- Firefox
 	- スマートフォン
+		※スマートフォンで動作確認するには、サーバーにアップロードする必要があります
 		- Android
 			- Chrome
 		- iPhone
 			- Safari
 
-- リセットCSS
-	css/reset.css のファイル名で用意してあります。
-	これは Josh W. Comeau 氏によるリセットCSS("Josh's Custom CSS Reset")です。
-	https://coliss.com/articles/build-websites/operation/css/my-custom-css-reset.html
-
-- img 要素には適切な width, height, alt 属性を指定して下さい
-	デザイン用途の img には空のalt （alt=""）を指定して下さい。
-
-- ソースコードには適切なインデントを設けて下さい
-
-- ハンバーガーメニューを実現するには https://computerwolf.github.io/SlickNav/ で配付している SlickNav を使用します
-	SlickNav の使用方法は https://github.com/AaronMaywood/SlickNav-Tuto を参考にしてください。
-
-- HTMLファイル名：index.html
-- CSS書類名：css/style.css
-- 主要言語：日本語
-- 文字コード：utf-8
-- 検索サイトに検索されないように設定してください。
-- タイトル：Green Camp
-- サイトの説明：Green Campでは、自然の中にある「森林探検隊」を運営しています。森林探検隊では、四季を通してイベントを開催したり、さまざまな商品の開発を行ってます。
-- ファビコン：images/favicon.ico
-
-- 書体は全ての箇所で次の設定を使用します。
-	「font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;」
-
 ## テキスト素材
 
+```
 Green Camp
 
 森林探検隊
@@ -103,3 +118,4 @@ Green Camp イベント情報
 （イメージ画像）探検基地の近くの池でホタル観賞会を開催します。ここにはホタルが自生しており、周囲には明るい民家や外灯などもありませんので、真っ暗な闇の中を飛び交う幻想的なホタルの光を見ることができます。
 
  (c) Green Camp
+```
