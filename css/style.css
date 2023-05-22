@@ -33,7 +33,7 @@ ul {
 
 .header-functions nav ul {
 	display: flex;
-	gap: 2rem;
+	gap: 32px;
 }
 
 .header-key-visual {
@@ -68,13 +68,19 @@ ul {
 }
 
 .section-1st ul li {
-	width: 100%;	/* TODO なぜこれで均等割になるのだろう？flexの配分について調べる */
+	width: 100%;
+		/*
+		width:100% はフレックスコンテナの全幅を指しているが、実際は格納可能な最大値として解釈される
+		（ここでは３つのアイテムを格納するので、アイテムひとつ分の幅は widht:33% として解釈される）
+		
+		(高度な話題) フレックスアイテムの幅の扱いについてはこの記事が詳しい。
+		width:33% として解釈されるのにはflex-shrinkが関わっていることも分かるだろう。
+		https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+		*/
 }
 
 .section-1st li section {
-	/* MEMO 画像の中央寄せはこれではできない。reset.css側でimgに対しdisplay:block; が指定されているため。
-	text-align: center;
-	*/
+	/* reset.css側でimgに対しdisplay:block; が指定されているため、画像の中央寄せは text-align: center ではできないことに注意 */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -91,7 +97,7 @@ ul {
 .section-1st li h3 {
 	width: 100%;
 	border-bottom: 2px solid #1a401a;
-	background: url('../images/mark.png') no-repeat;	/* MEMO backgroundに画像を配置することにより、テキスト中央寄せするだけで済む！これはちょっとしたテクニックだな */
+	background: url('../images/mark.png') no-repeat;	/* マーカーを背景画像として配置することにより、マーカーの幅がテキストの中央寄せに干渉することがなくなる */
 	text-align: center;
 }
 
@@ -99,12 +105,14 @@ ul {
 	border-radius: 50%;
 }
 
-.section-2nd {
-	margin: 40px 30px; 50px;
+.section-1st li section .card .description {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
 }
 
-.section-2nd h2 {
-	margin-bottom: 10px;
+.section-2nd {
+	margin: 40px 30px 50px;
 }
 
 .section-2nd ul {
@@ -114,7 +122,7 @@ ul {
 }
 
 .section-2nd ul li {
-	width: 100%;	/* TODO なぜこれで均等割になるのだろう？flexの配分について調べる */
+	width: 100%;
 }
 
 .section-2nd .container-flex {
@@ -228,6 +236,10 @@ footer {
 	.section-2nd .container-flex img {
 		width: 100%;
 		height: auto;
+	}
+
+	.section-2nd li h3 {
+		margin-bottom: 20px;
 	}
 
 	footer {

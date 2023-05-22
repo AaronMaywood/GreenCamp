@@ -1,87 +1,56 @@
 # GreenCamp
 
+- TODO 命名規則
+	BEM
+	https://qiita.com/takahirocook/items/01fd723b934e3b38cbbc
+- TODO PDF指示を明確にする
+	- flex に導かれるように、要素間のgapを統一する
+	- font
+bodyに背景画像「back.gif」を配置。
+h3 ボーダーカラー：#1a401a
+footer　カラー：#1a401a
+
 ## 要件
-- 検証
-	Chrome, Edge, Firefox
+- 以下のブラウザーでの動作確認を行って下さい。（所有している環境の範囲でかまいません）
+	- デスクトップPC
+		- Windows
+			- Chrome,
+			- Edge
+			- Firefox
+		- Mac
+			- Safari
+			- Chrome
+			- Firefox
+	- スマートフォン
+		- Android
+			- Chrome
+		- iPhone
+			- Safari
 
 - リセットCSS
 	css/reset.css のファイル名で用意してあります。
-	Josh W. Comeau氏によるリセットCSS("Josh's Custom CSS Reset")を使用します。
+	これは Josh W. Comeau 氏によるリセットCSS("Josh's Custom CSS Reset")です。
 	https://coliss.com/articles/build-websites/operation/css/my-custom-css-reset.html
 
-- 命名規則
-	BEM
-	https://qiita.com/takahirocook/items/01fd723b934e3b38cbbc
+- img 要素には適切な width, height, alt 属性を指定して下さい
+	デザイン用途の img には空のalt （alt=""）を指定して下さい。
 
-- img要素のwidth, height
-	指定して下さい
+- ソースコードには適切なインデントを設けて下さい
 
-- インデントを調整する
-- PDF指示を明確にする
-	- flex に導かれるように、要素間のgapを統一する
-	- font
+- ハンバーガーメニューを実現するには https://computerwolf.github.io/SlickNav/ で配付している SlickNav を使用します
+	SlickNav の使用方法は https://github.com/AaronMaywood/SlickNav-Tuto を参考にしてください。
 
-- SlickNav - Responsive Mobile Menu Plugin for jQuery
-	https://computerwolf.github.io/SlickNav/
-	CDN:
-	https://github.com/ComputerWolf/SlickNav
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
-	jQuery CDN:
-	https://developers.google.com/speed/libraries?hl=ja#jquery
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+- HTMLファイル名：index.html
+- CSS書類名：css/style.css
+- 主要言語：日本語
+- 文字コード：utf-8
+- 検索サイトに検索されないように設定してください。
+- タイトル：Green Camp
+- サイトの説明：Green Campでは、自然の中にある「森林探検隊」を運営しています。森林探検隊では、四季を通してイベントを開催したり、さまざまな商品の開発を行ってます。
+- ファビコン：images/favicon.ico
 
-## 指示
-
-HTMLファイル名：index.html
-CSS書類名：css/style.css
-主要言語：日本語
-文字コード：utf-8
-検索サイトに検索されないように設定してください。
-タイトル：Green Camp
-サイトの説明：Green Campでは、自然の中にある「森林探検隊」を運営しています。森林探検隊では、四季を通してイベントを開催したり、さまざまな商品の開発を行ってます。
-ファビコン：favicon.ico
-
-## その他指示
-書体設定：　"メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;
-
-bodyに背景画像「back.gif」を配置。
-
-h3 ボーダーカラー：#1a401a
-
-photo01.jpg　代替えテキスト：森の木々に囲まれたロッジ風の探検基地の写真
-
-photo02.jpg　代替えテキスト：雪が積もった雑木林の写真
-
-photo03.jpg　代替えテキスト：探検基地に現れた野うさぎの写真
-
-spring.jpg　イメージ画像なので代替えテキストの内容は不要
-
-night.jpg　イメージ画像なので代替えテキストの内容は不要
-
-footer　カラー：#1a401a
-
-## Slick の導入
-
-<link rel="stylesheet" href="css/slicknav.css">
-<link rel="stylesheet" href="css/effct.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="js/jquery.slicknav.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $('.menu').slicknav();
-  });
-
-  $('.menu').slicknav({
-    label: '',
-    prependTo: '.menu2',
-    brand: ''
-  });
-
-  $(".slicknav_btn").click(function () {
-    $(this).toggleClass("active");
-  });
-</script>
+- 書体は全ての箇所で次の設定を使用します。
+	「font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;」
 
 ## テキスト素材
 
@@ -134,6 +103,3 @@ Green Camp イベント情報
 （イメージ画像）探検基地の近くの池でホタル観賞会を開催します。ここにはホタルが自生しており、周囲には明るい民家や外灯などもありませんので、真っ暗な闇の中を飛び交う幻想的なホタルの光を見ることができます。
 
  (c) Green Camp
-
-
-
