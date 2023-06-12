@@ -31,6 +31,20 @@ ul {
 	padding: 20px 30px;
 }
 
+/* 423px以下の時にヘッダのロゴとハンバーガーメニューが干渉しないように調整 */
+@media (max-width: 423px) {
+	.header-functions h1 {
+		height: 60px;			/* ハンバーガーメニューの高さに合わせて */
+		display: flex;
+		align-items: center;	/* ロゴ画像を縦中央に表示 */
+	}
+
+	.header-functions h1 img {
+		max-width: 80%;			/* ハンバーガーメニューと干渉しないように縮小 */
+		height: auto;			/* 高さは幅の縮小に合わせる */
+	}
+}
+
 .header-functions nav ul {
 	display: flex;
 	gap: 32px;
